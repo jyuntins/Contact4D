@@ -1,0 +1,506 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="Contact4D: A Video Dataset for Whole-Body Human Motion and Finger Contact in Dexterous Operations">
+    <meta name="keywords" content="Contact4D">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/images/teaser.jpg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <title>Contact4D</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+  </head>
+  <body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item navbar-logo" href="#">
+        <span class="navbar-logo-text">Contact4D</span>
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNavbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="mainNavbar" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#abstract">Abstract</a>
+        <a class="navbar-item" href="#dataset">Dataset</a>
+        <a class="navbar-item" href="#BibTeX">BibTeX</a>
+      </div>
+    </div>
+  </nav>
+
+    <section class="hero" style="margin-top: 3.25rem;">
+      <div class="hero-body" style="padding-bottom: 0.5rem;">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-2 publication-title" style="font-family: 'Noto Sans', sans-serif"><span style="color: #3a9d6e">Contact4D:</span> A Video Dataset for Whole-Body Human Motion and Finger Contact in Dexterous Operations</h1>
+              <div class="is-size-5 publication-authors author-list">
+                <span class="author-block"><a href="" target="_blank" rel="noopener">Jyun-Ting Song</a><sup>1</sup></span>
+                <span class="author-block"><a href="" target="_blank" rel="noopener">JungEun Kim</a><sup>3</sup></span>
+                <span class="author-block"><a href="" target="_blank" rel="noopener">Jinkun Cao</a><sup>1</sup></span>
+                <span class="author-block"><a href="" target="_blank" rel="noopener">Yu Lei</a><sup>1</sup></span>
+                <span class="author-block"><a href="" target="_blank" rel="noopener">Takuma Yagi</a><sup>2</sup></span>
+                <span class="author-block"><a href="" target="_blank" rel="noopener">Kris Kitani</a><sup>1</sup></span>
+              </div>
+              <div class="publication-affiliations">
+                <span class="affiliation-item"><sup>1</sup>Carnegie Mellon University</span>
+                <span class="affiliation-item"><sup>2</sup>AIST</span>
+                <span class="affiliation-item"><sup>3</sup>KAIST</span>
+              </div>
+              <div class="publication-venue-badge">
+                <span>3DV 2026</span>
+              </div>
+              <div class="column has-text-centered">
+                    <div class="publication-links">
+                      <span class="link-block">
+                        <a href="https://github.com/jyuntins/Contact4D" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                      </a>
+                    </span>
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <!-- <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
+
+                <span class="link-block">
+                  <a href="https://openreview.net/pdf?id=5DPvfQtAjm" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" style="pointer-events: none; opacity: 0.6;">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="teaser-wrapper">
+        <!-- Teaser toggle (overlaid on top edge) -->
+        <div class="teaser-toggle">
+          <button type="button" class="teaser-toggle-btn is-active" data-target="teaser-video">
+            <i class="fas fa-play-circle"></i> Video
+          </button>
+          <button type="button" class="teaser-toggle-btn" data-target="teaser-figure">
+            <i class="fas fa-image"></i> Figure
+          </button>
+        </div>
+
+        <!-- Teaser video -->
+        <div class="teaser-content is-active" id="teaser-video">
+          <div style="border:2px solid #3a9d6e; border-radius:8px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.18);">
+            <video poster="" id="tree" autoplay playsinline controls muted loop height="100%" style="display:block;">
+              <source src="static/images/teaser.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- Teaser figure -->
+        <div class="teaser-content" id="teaser-figure">
+          <img src="static/images/teaser.jpg" width="100%" style="border-radius:8px; box-shadow:0 5px 15px rgba(0,0,0,0.10);">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- End paper abstract -->
+
+<section class="section" id="abstract">
+  <div class="container is-max-widescreen">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered fade-in">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Understanding how humans interact with objects is key to building robust human-centric artificial intelligence. However, this area remains relatively unexplored due to the lack of large-scale datasets. Recent datasets focusing on this issue mainly consist of activities captured entirely in controlled lab environments, and contact annotations are mostly estimated using threshold clips. We introduce Contact4D, a multi-view video dataset for human-object interaction that provides detailed body poses and accurate contact annotations. We use a flexible multi-view capture system to record individuals performing furniture assembly tasks and provide annotations for human detection, tracking, 2D/3D pose estimation, and ground-truth contact. Additionally, we propose a novel processing pipeline to extract accurate hand poses even when they are severely occluded. Contact4D consists of 2M images captured from 19 synchronized cameras across 350 video sequences, spanning diverse environments, varioius furniture types, and unique subjects. We evaluate existing methods for human pose estimation and human-centric contact estimation, demonstrating their inability to generalize to our dataset. Lastly, we fine-tune a pretrained MultiHMR model on Contact4D and observe an improved performance of 56.6% body MPJPE and 26.4% hand MPJPE in scenarios under severe self-occlusion and object occlusion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Dataset Comparison -->
+<section class="section" id="dataset">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered fade-in">
+      <h2 class="title is-3"><span style="color: #3a9d6e">Dataset</span> Statistics</h2>
+    </div>
+    <div class="columns is-centered has-text-centered" style="margin-top:1rem;">
+      <div class="column is-four-fifths">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered has-text-centered fade-in">
+        <h2 class="title is-3"><span style="color: #3a9d6e">Dataset</span> Examples</h2>
+      </div>
+      <div class="columns is-centered has-text-centered" style="margin-top:1rem;">
+        <div class="column is-four-fifths">
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- Motion Capture Setup - commented out for potential future use
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered fade-in">
+      <h2 class="title is-3"><span style="color: #3a9d6e">Motion</span> Capture</h2>
+    </div>
+    <div id="mocap-carousel" class="carousel" style="margin-top:1rem;">
+      <div class="item" style="padding: 0 0.5rem;">
+        <div class="videobox">
+          <video preload="none" poster="" playsinline controls muted loop width="100%">
+            <source src="./static/images/motion_capture/datasets_2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="item" style="padding: 0 0.5rem;">
+        <div class="videobox">
+          <video preload="none" poster="" playsinline controls muted loop width="100%">
+            <source src="./static/images/motion_capture/datasets_3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="item" style="padding: 0 0.5rem;">
+        <div class="videobox">
+          <video preload="none" poster="" playsinline controls muted loop width="100%">
+            <source src="./static/images/motion_capture/datasets_4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="item" style="padding: 0 0.5rem;">
+        <div class="videobox">
+          <video preload="none" poster="" playsinline controls muted loop width="100%">
+            <source src="./static/images/motion_capture/datasets_5.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="item" style="padding: 0 0.5rem;">
+        <div class="videobox">
+          <video preload="none" poster="" playsinline controls muted loop width="100%">
+            <source src="./static/images/motion_capture/datasets_6.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="item" style="padding: 0 0.5rem;">
+        <div class="videobox">
+          <video preload="none" poster="" playsinline controls muted loop width="100%">
+            <source src="./static/images/motion_capture/datasets_7.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="item" style="padding: 0 0.5rem;">
+        <div class="videobox">
+          <video preload="none" poster="" playsinline controls muted loop width="100%">
+            <source src="./static/images/motion_capture/datasets_8.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+End Motion Capture Setup -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{song2026contact4d,
+  title = {Contact4D: A Video Dataset for Whole-Body Human Motion and Finger Contact in Dexterous Operations},
+  author = {Song, Jyun-Ting and Kim, JungEun and Cao, Jinkun and Lei, Yu and Yagi, Takuma and Kitani, Kris},
+  journal = {arXiv},
+  year = {2026},
+}</code></pre>
+    </div>
+</section>
+
+
+  <!--BibTex citation -->
+  <!--End BibTex citation -->
+
+
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+      <!-- End of Statcounter Code -->
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                Thanks to <a href="https://keunhong.com/">Keunhong Park</a> for the <a href="https://nerfies.github.io/">website template</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    $navbarBurgers.forEach(el => {
+      el.addEventListener('click', () => {
+        const target = document.getElementById(el.dataset.target);
+        el.classList.toggle('is-active');
+        target.classList.toggle('is-active');
+      });
+    });
+
+    // Scroll-spy: highlight active navbar link
+    const navLinks = document.querySelectorAll('.navbar-menu .navbar-item[href^="#"]');
+    const sections = [];
+    navLinks.forEach(link => {
+      const id = link.getAttribute('href').slice(1);
+      const sec = document.getElementById(id);
+      if (sec) sections.push({ el: sec, link: link });
+    });
+
+    // Scroll progress bar
+    const progressBar = document.getElementById('scrollProgress');
+
+    if (sections.length) {
+      const onScroll = () => {
+        const scrollY = window.scrollY + 100;
+        // Active nav link
+        let current = sections[0];
+        sections.forEach(s => {
+          if (s.el.offsetTop <= scrollY) current = s;
+        });
+        navLinks.forEach(l => l.classList.remove('is-active-link'));
+        current.link.classList.add('is-active-link');
+        // Progress bar
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        progressBar.style.width = (window.scrollY / docHeight * 100) + '%';
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+
+    // Fade-in on scroll
+    const fadeEls = document.querySelectorAll('.fade-in');
+    if (fadeEls.length) {
+      const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            fadeObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      fadeEls.forEach(el => fadeObserver.observe(el));
+    }
+  });
+
+  // --- Non-carousel videos: lazy-load and autoplay on scroll ---
+  const carouselIds = ['#dataset-carousel', '#text2motion-carousel', '#mocap-carousel'];
+
+  // Collect non-carousel videos (exclude those inside carousel containers)
+  const standaloneVideos = [];
+  document.querySelectorAll('video[preload="none"]').forEach(video => {
+    if (!video.closest('.carousel')) {
+      standaloneVideos.push(video);
+    }
+  });
+
+  const loadObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const video = entry.target;
+        video.preload = 'auto';
+        video.load();
+        loadObserver.unobserve(video);
+      }
+    });
+  }, { rootMargin: '400px' });
+
+  const playObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.25 });
+
+  standaloneVideos.forEach(video => {
+    loadObserver.observe(video);
+    playObserver.observe(video);
+  });
+
+  // --- Carousel videos: play all when carousel is on screen, pause when off ---
+  const carouselObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const videos = entry.target.querySelectorAll('video');
+      if (entry.isIntersecting) {
+        // Load and play all videos in this carousel
+        videos.forEach(v => {
+          if (v.preload === 'none') {
+            v.preload = 'auto';
+            v.load();
+          }
+          v.play().catch(() => {});
+        });
+      } else {
+        videos.forEach(v => v.pause());
+      }
+    });
+  }, { threshold: 0.1 });
+
+  carouselIds.forEach(id => {
+    const el = document.querySelector(id);
+    if (el) carouselObserver.observe(el);
+  });
+
+  // Teaser / scaling toggle (scoped per wrapper)
+  document.querySelectorAll('.teaser-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const wrapper = btn.closest('.teaser-wrapper, .scaling-wrapper');
+      if (!wrapper) return;
+      wrapper.querySelectorAll('.teaser-toggle-btn').forEach(b => b.classList.remove('is-active'));
+      wrapper.querySelectorAll('.teaser-content').forEach(c => {
+        c.classList.remove('is-active');
+        c.querySelectorAll('video').forEach(v => v.pause());
+      });
+      btn.classList.add('is-active');
+      const target = document.getElementById(btn.dataset.target);
+      if (target) {
+        target.classList.add('is-active');
+        target.querySelectorAll('video').forEach(v => v.play().catch(() => {}));
+      }
+    });
+  });
+
+  // Task tab switching
+  document.querySelectorAll('.task-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Deactivate all tabs and panels
+      document.querySelectorAll('.task-tab').forEach(t => t.classList.remove('is-active'));
+      document.querySelectorAll('.task-panel').forEach(p => {
+        p.classList.remove('is-active');
+        p.querySelectorAll('video').forEach(v => v.pause());
+      });
+      // Activate clicked tab and its panel
+      btn.classList.add('is-active');
+      const panel = document.getElementById(btn.dataset.target);
+      if (panel) {
+        panel.classList.add('is-active');
+        panel.querySelectorAll('video').forEach(v => {
+          if (v.preload === 'none') { v.preload = 'auto'; v.load(); }
+          v.play().catch(() => {});
+        });
+      }
+    });
+  });
+
+  // Back-to-top button
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('is-visible', window.scrollY > 600);
+    }, { passive: true });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Image fade-in on load
+  document.querySelectorAll('.section img').forEach(img => {
+    if (img.complete) {
+      img.classList.add('is-loaded');
+    } else {
+      img.addEventListener('load', () => img.classList.add('is-loaded'));
+    }
+  });
+
+  function copyBibTeX() {
+    const bibtexCode = document.getElementById('bibtex-code').innerText;
+    navigator.clipboard.writeText(bibtexCode).then(() => {
+      const btn = document.querySelector('.copy-bibtex-btn .copy-text');
+      btn.textContent = 'Copied!';
+      setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+    });
+  }
+  </script>
+
+  </body>
+  </html>

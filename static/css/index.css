@@ -1,0 +1,862 @@
+@font-face {
+  font-family:'eunike';
+  src:url("fonts/MouldyCheeseRegular-WyMWG.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 1.5rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-title {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+  padding-bottom: 1rem;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+    line-height: 1.8;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors a {
+   color: #444 !important;
+   text-decoration: none;
+   transition: color 0.2s;
+}
+
+.publication-authors a:hover {
+    color: #3a9d6e !important;
+    text-decoration: none;
+}
+
+/* ── Author name blocks ── */
+.author-block {
+  display: inline-block;
+  margin: 0.15rem 0.2rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+  transition: background 0.2s;
+  font-weight: 450;
+}
+
+.author-block:hover {
+  background: rgba(58, 157, 110, 0.06);
+}
+
+.author-block sup {
+  color: #3a9d6e;
+  font-weight: 600;
+  margin-left: 1px;
+}
+
+/* ── Affiliation row ── */
+.is-size-6.publication-authors {
+  color: #777;
+  letter-spacing: 0.01em;
+}
+
+.is-size-6.publication-authors .author-block {
+  padding: 0.15rem 0.5rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.is-size-6.publication-authors .author-block sup {
+  color: #3a9d6e;
+  font-weight: 700;
+  margin-right: 2px;
+}
+
+/* ── Author list flex wrap ── */
+.author-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+}
+
+/* ── Affiliations ── */
+.publication-affiliations {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1rem;
+  color: #474646;
+  margin-top: 0.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.1rem 1.2rem;
+}
+
+.affiliation-item {
+  display: inline-block;
+}
+
+.affiliation-item sup {
+  color: #3a9d6e;
+  font-weight: 700;
+  margin-right: 2px;
+}
+
+/* ── Role notes ── */
+.publication-notes {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1rem;
+  color: #474646;
+  margin-top: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.publication-notes sup {
+  color: #3a9d6e;
+  font-weight: 700;
+}
+
+.note-sep {
+  width: 3px;
+  height: 3px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ── Venue badge ── */
+.publication-venue-badge {
+  margin-top: 0.6rem;
+}
+
+.publication-venue-badge span {
+  display: inline-block;
+  background: linear-gradient(135deg, #3a9d6e, #4abf8a);
+  color: #fff;
+  padding: 0.25rem 1.2rem;
+  border-radius: 20px;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+
+.publication-banner img {
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.videobox {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+  background-color: #FFFFFF;
+}
+
+.viewbox {
+  width: 300px;
+}
+
+.handwriting {
+  font-family: 'eunike';
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+.slider-pagination .slider-page {
+  background: #000000;
+}
+
+.carousel {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.eql-cntrb {
+  font-size: smaller;
+}
+
+.hand-description {
+  font-size: 0.9rem;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  text-align: left !important;
+  min-height: 80px;
+  display: block;
+  color: #555;
+  margin-top: 0.5rem;
+  padding: 0 0.25rem;
+}
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
+
+/* Prompt box */
+.prompt-box {
+  background: #f5f5f5;
+  padding: 0.9rem 1.4rem;
+  margin-bottom: 1.25rem;
+  border-radius: 4px;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Alternating section background */
+.section-alt {
+  background-color: #fcfcfc;
+}
+
+/* Navbar burger toggle */
+.navbar-burger span {
+  height: 2px;
+}
+
+.navbar-burger.is-active span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.navbar-burger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-burger.is-active span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+/* BibTeX header */
+.bibtex-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Copy BibTeX button */
+.copy-bibtex-btn {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.copy-bibtex-btn:hover {
+  background: #f5f5f5;
+  border-color: #999;
+}
+
+/* ── Navbar ── */
+.navbar.is-fixed-top {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(58, 157, 110, 0.08);
+  padding: 0 1rem;
+}
+
+.navbar-logo {
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+  font-size: 1.35rem !important;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  padding-left: 0.5rem !important;
+}
+
+.navbar-logo:hover {
+  background: transparent !important;
+}
+
+.navbar-logo-text {
+  color: #2d2d2d;
+}
+
+.navbar-logo-accent {
+  color: #3a9d6e;
+}
+
+.navbar-menu .navbar-item {
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  padding: 0.5rem 1rem;
+  margin: 0.4rem 0.15rem;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+}
+
+.navbar-menu .navbar-item:hover {
+  color: #3a9d6e !important;
+  background: rgba(58, 157, 110, 0.06) !important;
+}
+
+.navbar-menu .navbar-item.is-active-link {
+  color: #3a9d6e !important;
+}
+
+.navbar-menu .navbar-item.is-active-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 2px;
+  background: #3a9d6e;
+  border-radius: 1px;
+}
+
+/* ── Section title accent ── */
+.section > .container > .columns:first-child .title.is-3 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+}
+
+.section > .container > .columns:first-child .title.is-3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #3a9d6e, #5bc49a);
+  border-radius: 2px;
+}
+
+/* ── Section divider gradient ── */
+.section + .section {
+  border-top: 1px solid transparent;
+  border-image: linear-gradient(90deg, transparent 15%, #e0e0e0 50%, transparent 85%) 1;
+}
+
+/* ── Video hover effects ── */
+.videobox {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.videobox:hover {
+  box-shadow: 0 4px 20px rgba(58, 157, 110, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ── Fade-in on scroll ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.fade-in.is-visible {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ── Footer ── */
+.footer {
+  background: linear-gradient(180deg, #f9f9f9, #f0f5f1) !important;
+  padding: 2rem 1.5rem !important;
+  border-top: 1px solid #e8e8e8;
+}
+
+.footer p {
+  color: #888;
+}
+
+.footer a {
+  color: #3a9d6e;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: #2d7a56;
+}
+
+/* ── BibTeX code block ── */
+#bibtex-code {
+  background: #f8fbf9;
+  border: 1px solid #e2ece6;
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+
+/* ── Publication title shimmer on hover ── */
+.publication-title span {
+  transition: text-shadow 0.3s;
+}
+
+.publication-title:hover span {
+  text-shadow: 0 0 16px rgba(58, 157, 110, 0.25);
+}
+
+/* ── Subtitle task headers ── */
+.title.is-4 {
+  color: #444;
+  letter-spacing: 0.01em;
+}
+
+/* ── Hero header refinement ── */
+.publication-title {
+  font-weight: 700 !important;
+  letter-spacing: -0.01em;
+  line-height: 1.3 !important;
+}
+
+.publication-title span {
+  background: linear-gradient(135deg, #2e8a5a, #4abf8a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Action buttons ── */
+.publication-links .button.is-dark {
+  background: linear-gradient(135deg, #363636, #4a4a4a) !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.publication-links .button.is-dark:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* ── TL;DR callout ── */
+.content.is-size-5[style*="dashed"] {
+  border: none !important;
+  background: linear-gradient(135deg, #f0faf4, #f5fcf7) !important;
+  border-left: 3px solid #3a9d6e !important;
+  border-radius: 0 8px 8px 0 !important;
+}
+
+/* ── Abstract text ── */
+.content.has-text-justified p {
+  color: #444;
+  line-height: 1.75;
+}
+
+/* ── Dataset comparison image ── */
+.section img[alt="Dataset Comparison"] {
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Teaser video glow ── */
+.hero.teaser .hero-body > div[style*="border"] {
+  border-color: transparent !important;
+  background: linear-gradient(135deg, #3a9d6e, #5bc49a) padding-box,
+              linear-gradient(135deg, #3a9d6e, #5bc49a) border-box;
+  padding: 2px;
+}
+
+.hero.teaser .hero-body video,
+.hero.teaser .hero-body img {
+  border-radius: 6px;
+}
+
+/* ── Carousel navigation arrows ── */
+.slider-navigation-previous,
+.slider-navigation-next {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(58, 157, 110, 0.15) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.slider-navigation-previous:hover,
+.slider-navigation-next:hover {
+  box-shadow: 0 3px 12px rgba(58, 157, 110, 0.18);
+  transform: scale(1.15) !important;
+}
+
+.slider-navigation-previous svg,
+.slider-navigation-next svg {
+  fill: #3a9d6e;
+}
+
+/* ── Carousel pagination dots ── */
+.slider-pagination .slider-page {
+  background: #c8ddd2 !important;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.slider-pagination .slider-page.is-active,
+.slider-pagination .slider-page:hover {
+  background: #3a9d6e !important;
+}
+
+/* ── Subtle label styling ── */
+.subtitle.is-6 {
+  color: #666;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* ── Scroll progress bar ── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3a9d6e, #5bc49a);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* ── Selection color ── */
+::selection {
+  background: rgba(58, 157, 110, 0.2);
+  color: inherit;
+}
+
+/* ── Alternating section tints ── */
+.section:nth-of-type(odd) {
+  background-color: #fff;
+}
+
+.section:nth-of-type(even) {
+  background-color: #fafdfb;
+}
+
+/* ── Task tabs ── */
+.task-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.task-tab {
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #666;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.task-tab:hover {
+  color: #3a9d6e;
+  border-color: #3a9d6e;
+  background: rgba(58, 157, 110, 0.05);
+}
+
+.task-tab.is-active {
+  color: #fff;
+  background: linear-gradient(135deg, #3a9d6e, #4abf8a);
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(58, 157, 110, 0.25);
+}
+
+/* ── Task panels ── */
+.task-panels {
+  position: relative;
+}
+
+.task-panel {
+  display: none !important;
+  animation: fadeInUp 0.35s ease forwards;
+}
+
+.task-panel.is-active {
+  display: block !important;
+}
+
+/* ── Teaser toggle ── */
+.teaser-wrapper,
+.scaling-wrapper {
+  position: relative;
+}
+
+.teaser-toggle {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  z-index: 10;
+  display: flex;
+  gap: 0.35rem;
+}
+
+.teaser-toggle-btn {
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.teaser-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.teaser-toggle-btn.is-active {
+  color: #fff;
+  background: rgba(58, 157, 110, 0.8);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.teaser-content {
+  display: none;
+  animation: fadeInUp 0.35s ease forwards;
+}
+
+.teaser-content.is-active {
+  display: block;
+}
+
+/* ── Back-to-top button ── */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(58, 157, 110, 0.85);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 12px rgba(58, 157, 110, 0.3);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s, background 0.2s;
+  z-index: 99;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  background: rgba(58, 157, 110, 1);
+  transform: translateY(-2px);
+}
+
+/* ── Image fade-in on load ── */
+.section img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.section img.is-loaded {
+  opacity: 1;
+}
+
+/* ── Smooth link underline on hover (non-navbar) ── */
+.content a:not(.button) {
+  text-decoration: none;
+  background-image: linear-gradient(#3a9d6e, #3a9d6e);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.3s ease;
+}
+
+.content a:not(.button):hover {
+  background-size: 100% 1px;
+}
+
+/* ── Mobile responsiveness for overlay toggles ── */
+@media screen and (max-width: 768px) {
+  .teaser-toggle {
+    position: relative;
+    top: auto;
+    right: auto;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .teaser-toggle-btn {
+    background: rgba(58, 157, 110, 0.1);
+    color: #3a9d6e;
+    border-color: rgba(58, 157, 110, 0.2);
+  }
+
+  .teaser-toggle-btn.is-active {
+    color: #fff;
+    background: rgba(58, 157, 110, 0.85);
+  }
+
+  .task-tabs {
+    gap: 0.3rem;
+  }
+
+  .task-tab {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+/* ── Subtle hover lift for dataset comparison image ── */
+.section img[alt="Dataset Comparison"] {
+  transition: opacity 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section img[alt="Dataset Comparison"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ── BibTeX copy button polish ── */
+.copy-bibtex-btn:active {
+  transform: scale(0.96);
+}
+
+/* ── Smoother carousel transition ── */
+.slider-container {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
