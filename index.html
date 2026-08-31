@@ -206,8 +206,25 @@
     <div class="columns is-centered has-text-centered fade-in">
       <h2 class="title is-3"><span style="color: #3a9d6e">Dataset</span> Statistics</h2>
     </div>
-    <div class="columns is-centered has-text-centered" style="margin-top:1rem;">
+    <div class="columns is-centered has-text-centered fade-in" style="margin-top:1rem;">
       <div class="column is-four-fifths">
+        <img src="static/images/dataset_statistics.jpg" alt="Dataset statistics overview" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+        <p class="subtitle is-6">34 capture sessions, 448 recorded sequences, 17&ndash;18 synchronized exo cameras per sequence, and 2.68M images in total &mdash; 347 sequences include ground-truth fingertip-contact annotations.</p>
+      </div>
+    </div>
+
+    <div class="columns is-centered fade-in" style="margin-top:2rem;">
+      <div class="column has-text-centered">
+        <img src="static/images/camera_rig_schematic.jpg" alt="Multi-camera capture rig schematic" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+        <p class="subtitle is-6">17 synchronized exo cameras ring each subject, plus one head-worn Aria egocentric device (RGB + stereo) at the center.</p>
+      </div>
+      <div class="column has-text-centered">
+        <img src="static/images/colmap_pointcloud.jpg" alt="COLMAP 3D point-cloud reconstruction" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+        <p class="subtitle is-6">Structure-from-motion reconstruction recovering all 17 exo camera poses (blue) and the Aria device (orange) for one capture session.</p>
+      </div>
+      <div class="column has-text-centered">
+        <img src="static/images/finger_contact_usage.jpg" alt="Fingertip contact usage by finger" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+        <p class="subtitle is-6">Fraction of annotated frames each fingertip is in contact, by hand, across all sequences with finger-contact labels.</p>
       </div>
     </div>
   </div>
@@ -218,75 +235,122 @@
       <div class="columns is-centered has-text-centered fade-in">
         <h2 class="title is-3"><span style="color: #3a9d6e">Dataset</span> Examples</h2>
       </div>
-      <div class="columns is-centered has-text-centered" style="margin-top:1rem;">
+
+      <!-- Diversity gallery -->
+      <div class="columns is-centered has-text-centered fade-in" style="margin-top:1rem;">
         <div class="column is-four-fifths">
+          <img src="static/images/diversity_gallery_30.jpg" alt="30-session diversity gallery" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+          <p class="subtitle is-6">One frame from each of the 30 curated capture sessions &mdash; spanning distinct subjects, rooms, and furniture-assembly objects.</p>
+        </div>
+      </div>
+
+      <!-- Annotation types strip -->
+      <div class="columns is-centered has-text-centered fade-in" style="margin-top:2rem;">
+        <div class="column is-four-fifths">
+          <img src="static/images/annotation_types_strip.jpg" alt="Annotation types strip" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+          <p class="subtitle is-6">The same frame annotated six ways: raw image, 2D body+hand keypoints, SMPL, SMPL-X, MANO, and per-fingertip contact state.</p>
+        </div>
+      </div>
+
+      <!-- Multiview sync -->
+      <div class="columns is-centered has-text-centered fade-in" style="margin-top:2rem;">
+        <div class="column is-four-fifths">
+          <img src="static/images/multiview_sync.jpg" alt="Synchronized multi-view frame" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+          <p class="subtitle is-6">One synchronized instant seen from 5 of the 17 exo cameras plus the Aria egocentric view.</p>
+        </div>
+      </div>
+
+      <!-- 30-session grid teaser video -->
+      <div class="columns is-centered has-text-centered fade-in" style="margin-top:2rem;">
+        <div class="column is-four-fifths">
+          <h4 class="title is-4">30-Session Grid Teaser</h4>
+          <div class="videobox">
+            <video preload="none" playsinline controls muted loop width="100%">
+              <source src="static/images/videos/all_sessions_grid_teaser.mp4" type="video/mp4">
+            </video>
           </div>
+          <p class="subtitle is-6">All 30 curated sessions side by side, cycling through raw &rarr; 2D keypoints &rarr; SMPL &rarr; MANO &rarr; SMPL-X.</p>
+        </div>
+      </div>
+
+      <!-- Pose+mesh / finger-contact video tabs -->
+      <div class="columns is-centered fade-in" style="margin-top:2.5rem;">
+        <div class="column is-full has-text-centered">
+          <div class="task-tabs">
+            <button class="task-tab is-active" data-target="panel-pose-mesh">Pose + Mesh</button>
+            <button class="task-tab" data-target="panel-finger-contact">Finger Contact</button>
+          </div>
+          <div class="task-panels">
+
+            <div class="task-panel is-active" id="panel-pose-mesh">
+              <div class="videobox">
+                <video preload="none" playsinline controls muted loop width="100%">
+                  <source src="static/images/videos/session_03_panel.mp4" type="video/mp4">
+                </video>
+              </div>
+              <p class="subtitle is-6">session_03, exo cam05 &mdash; Raw | 2D keypoints | SMPL-X + MANO mesh.</p>
+
+              <div class="videobox" style="margin-top:1rem;">
+                <video preload="none" playsinline controls muted loop width="100%">
+                  <source src="static/images/videos/session_06_panel.mp4" type="video/mp4">
+                </video>
+              </div>
+              <p class="subtitle is-6">session_06, exo cam05 &mdash; Raw | 2D keypoints | SMPL-X + MANO mesh.</p>
+
+              <div class="videobox" style="margin-top:1rem;">
+                <video preload="none" playsinline controls muted loop width="100%">
+                  <source src="static/images/videos/session_10_panel.mp4" type="video/mp4">
+                </video>
+              </div>
+              <p class="subtitle is-6">session_10, exo cam05 &mdash; Raw | 2D keypoints | SMPL-X + MANO mesh.</p>
+
+              <div class="columns is-centered" style="margin-top:1rem;">
+                <div class="column is-half">
+                  <div class="videobox">
+                    <video preload="none" playsinline controls muted loop width="100%">
+                      <source src="static/images/videos/session_10_ego_panel.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <p class="subtitle is-6">session_10, Aria egocentric &mdash; Raw | SMPL-X + MANO mesh.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="task-panel" id="panel-finger-contact">
+              <div class="columns">
+                <div class="column">
+                  <div class="videobox">
+                    <video preload="none" playsinline controls muted loop width="100%">
+                      <source src="static/images/videos/session_06_finger_contact.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <p class="subtitle is-6">session_06</p>
+                </div>
+                <div class="column">
+                  <div class="videobox">
+                    <video preload="none" playsinline controls muted loop width="100%">
+                      <source src="static/images/videos/session_10_finger_contact.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <p class="subtitle is-6">session_10</p>
+                </div>
+                <div class="column">
+                  <div class="videobox">
+                    <video preload="none" playsinline controls muted loop width="100%">
+                      <source src="static/images/videos/session_17_finger_contact.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <p class="subtitle is-6">session_17</p>
+                </div>
+              </div>
+              <p class="subtitle is-6">Per-fingertip contact state overlaid live on the hand skeleton (green = in contact, red = not).</p>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </section>
-
-
-
-<!-- Motion Capture Setup - commented out for potential future use
-<section class="section">
-  <div class="container is-max-widescreen">
-    <div class="columns is-centered has-text-centered fade-in">
-      <h2 class="title is-3"><span style="color: #3a9d6e">Motion</span> Capture</h2>
-    </div>
-    <div id="mocap-carousel" class="carousel" style="margin-top:1rem;">
-      <div class="item" style="padding: 0 0.5rem;">
-        <div class="videobox">
-          <video preload="none" poster="" playsinline controls muted loop width="100%">
-            <source src="./static/images/motion_capture/datasets_2.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="item" style="padding: 0 0.5rem;">
-        <div class="videobox">
-          <video preload="none" poster="" playsinline controls muted loop width="100%">
-            <source src="./static/images/motion_capture/datasets_3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="item" style="padding: 0 0.5rem;">
-        <div class="videobox">
-          <video preload="none" poster="" playsinline controls muted loop width="100%">
-            <source src="./static/images/motion_capture/datasets_4.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="item" style="padding: 0 0.5rem;">
-        <div class="videobox">
-          <video preload="none" poster="" playsinline controls muted loop width="100%">
-            <source src="./static/images/motion_capture/datasets_5.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="item" style="padding: 0 0.5rem;">
-        <div class="videobox">
-          <video preload="none" poster="" playsinline controls muted loop width="100%">
-            <source src="./static/images/motion_capture/datasets_6.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="item" style="padding: 0 0.5rem;">
-        <div class="videobox">
-          <video preload="none" poster="" playsinline controls muted loop width="100%">
-            <source src="./static/images/motion_capture/datasets_7.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="item" style="padding: 0 0.5rem;">
-        <div class="videobox">
-          <video preload="none" poster="" playsinline controls muted loop width="100%">
-            <source src="./static/images/motion_capture/datasets_8.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-End Motion Capture Setup -->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
