@@ -159,6 +159,9 @@
           <button type="button" class="teaser-toggle-btn is-active" data-target="teaser-video">
             <i class="fas fa-play-circle"></i> Video
           </button>
+          <button type="button" class="teaser-toggle-btn" data-target="teaser-grid">
+            <i class="fas fa-th"></i> All Sessions
+          </button>
           <button type="button" class="teaser-toggle-btn" data-target="teaser-figure">
             <i class="fas fa-image"></i> Figure
           </button>
@@ -169,6 +172,15 @@
           <div style="border:2px solid #3a9d6e; border-radius:8px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.18);">
             <video poster="" id="tree" autoplay playsinline controls muted loop height="100%" style="display:block;">
               <source src="static/images/teaser.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <!-- 30-session grid teaser video -->
+        <div class="teaser-content" id="teaser-grid">
+          <div style="border:2px solid #3a9d6e; border-radius:8px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.18);">
+            <video poster="" autoplay playsinline controls muted loop width="100%" style="display:block;">
+              <source src="static/images/videos/all_sessions_grid_teaser.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -209,22 +221,14 @@
     <div class="columns is-centered has-text-centered fade-in" style="margin-top:1rem;">
       <div class="column is-four-fifths">
         <img src="static/images/dataset_statistics.jpg" alt="Dataset statistics overview" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-        <p class="subtitle is-6">34 capture sessions, 448 recorded sequences, 17&ndash;18 synchronized exo cameras per sequence, and 2.68M images in total &mdash; 347 sequences include ground-truth fingertip-contact annotations.</p>
+        <p class="subtitle is-6">34 capture sessions, 448 recorded sequences, 18 synchronized exo cameras per sequence, and 2.68M images in total, with per-frame camera, keypoint, and mesh annotations throughout.</p>
       </div>
     </div>
 
-    <div class="columns is-centered fade-in" style="margin-top:2rem;">
-      <div class="column has-text-centered">
-        <img src="static/images/camera_rig_schematic.jpg" alt="Multi-camera capture rig schematic" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-        <p class="subtitle is-6">17 synchronized exo cameras ring each subject, plus one head-worn Aria egocentric device (RGB + stereo) at the center.</p>
-      </div>
-      <div class="column has-text-centered">
-        <img src="static/images/colmap_pointcloud.jpg" alt="COLMAP 3D point-cloud reconstruction" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-        <p class="subtitle is-6">Structure-from-motion reconstruction recovering all 17 exo camera poses (blue) and the Aria device (orange) for one capture session.</p>
-      </div>
-      <div class="column has-text-centered">
-        <img src="static/images/finger_contact_usage.jpg" alt="Fingertip contact usage by finger" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-        <p class="subtitle is-6">Fraction of annotated frames each fingertip is in contact, by hand, across all sequences with finger-contact labels.</p>
+    <div class="columns is-centered has-text-centered fade-in" style="margin-top:2rem;">
+      <div class="column is-four-fifths">
+        <img src="static/images/camera_rig_schematic.jpg" alt="Multi-camera capture rig schematic" class="zoomable-img" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+        <p class="subtitle is-6">17 synchronized exo cameras ring each subject, plus one head-worn Aria egocentric device (RGB + stereo) at the center. Click to zoom in.</p>
       </div>
     </div>
   </div>
@@ -240,7 +244,7 @@
       <div class="columns is-centered has-text-centered fade-in" style="margin-top:1rem;">
         <div class="column is-four-fifths">
           <img src="static/images/diversity_gallery_30.jpg" alt="30-session diversity gallery" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-          <p class="subtitle is-6">One frame from each of the 30 curated capture sessions &mdash; spanning distinct subjects, rooms, and furniture-assembly objects.</p>
+          <p class="subtitle is-6">Raw images from Contact4D &mdash; spanning distinct subjects, rooms, and furniture-assembly tasks.</p>
         </div>
       </div>
 
@@ -248,7 +252,7 @@
       <div class="columns is-centered has-text-centered fade-in" style="margin-top:2rem;">
         <div class="column is-four-fifths">
           <img src="static/images/annotation_types_strip.jpg" alt="Annotation types strip" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-          <p class="subtitle is-6">The same frame annotated six ways: raw image, 2D body+hand keypoints, SMPL, SMPL-X, MANO, and per-fingertip contact state.</p>
+          <p class="subtitle is-6">Raw image, 2D body+hand keypoints, SMPL, SMPL-X, MANO, and per-fingertip contact state.</p>
         </div>
       </div>
 
@@ -260,93 +264,98 @@
         </div>
       </div>
 
-      <!-- 30-session grid teaser video -->
-      <div class="columns is-centered has-text-centered fade-in" style="margin-top:2rem;">
+      <!-- Pose + mesh carousel -->
+      <div class="columns is-centered has-text-centered fade-in" style="margin-top:2.5rem;">
         <div class="column is-four-fifths">
-          <h4 class="title is-4">30-Session Grid Teaser</h4>
+          <h4 class="title is-4">Pose + Mesh Examples</h4>
+        </div>
+      </div>
+      <div id="dataset-carousel" class="carousel" style="margin-top:1rem;">
+        <div class="item" style="padding: 0 0.5rem;">
           <div class="videobox">
             <video preload="none" playsinline controls muted loop width="100%">
-              <source src="static/images/videos/all_sessions_grid_teaser.mp4" type="video/mp4">
+              <source src="static/images/videos/session_03_panel.mp4" type="video/mp4">
             </video>
           </div>
-          <p class="subtitle is-6">All 30 curated sessions side by side, cycling through raw &rarr; 2D keypoints &rarr; SMPL &rarr; MANO &rarr; SMPL-X.</p>
+          <p class="hand-description">
+            <span style="color:#3a9d6e">session_03</span>, exo cam05.<br>
+            Three panels side by side: raw image, 2D body+hand keypoints, and the fitted SMPL-X + MANO mesh.
+          </p>
+        </div>
+        <div class="item" style="padding: 0 0.5rem;">
+          <div class="videobox">
+            <video preload="none" playsinline controls muted loop width="100%">
+              <source src="static/images/videos/session_06_panel.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p class="hand-description">
+            <span style="color:#3a9d6e">session_06</span>, exo cam05.<br>
+            Three panels side by side: raw image, 2D body+hand keypoints, and the fitted SMPL-X + MANO mesh.
+          </p>
+        </div>
+        <div class="item" style="padding: 0 0.5rem;">
+          <div class="videobox">
+            <video preload="none" playsinline controls muted loop width="100%">
+              <source src="static/images/videos/session_10_panel.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p class="hand-description">
+            <span style="color:#3a9d6e">session_10</span>, exo cam05.<br>
+            Three panels side by side: raw image, 2D body+hand keypoints, and the fitted SMPL-X + MANO mesh.
+          </p>
+        </div>
+        <div class="item" style="padding: 0 0.5rem;">
+          <div class="videobox">
+            <video preload="none" playsinline controls muted loop width="100%">
+              <source src="static/images/videos/session_10_ego_panel.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p class="hand-description">
+            <span style="color:#3a9d6e">session_10</span>, Aria egocentric view.<br>
+            Two panels: the raw egocentric stream and the fitted SMPL-X + MANO mesh rendered on the undistorted image.
+          </p>
         </div>
       </div>
 
-      <!-- Pose+mesh / finger-contact video tabs -->
-      <div class="columns is-centered fade-in" style="margin-top:2.5rem;">
-        <div class="column is-full has-text-centered">
-          <div class="task-tabs">
-            <button class="task-tab is-active" data-target="panel-pose-mesh">Pose + Mesh</button>
-            <button class="task-tab" data-target="panel-finger-contact">Finger Contact</button>
+      <!-- Finger contact carousel -->
+      <div class="columns is-centered has-text-centered fade-in" style="margin-top:2.5rem;">
+        <div class="column is-four-fifths">
+          <h4 class="title is-4">Finger Contact Examples</h4>
+        </div>
+      </div>
+      <div id="mocap-carousel" class="carousel" style="margin-top:1rem;">
+        <div class="item" style="padding: 0 0.5rem;">
+          <div class="videobox">
+            <video preload="none" playsinline controls muted loop width="100%">
+              <source src="static/images/videos/session_06_finger_contact.mp4" type="video/mp4">
+            </video>
           </div>
-          <div class="task-panels">
-
-            <div class="task-panel is-active" id="panel-pose-mesh">
-              <div class="videobox">
-                <video preload="none" playsinline controls muted loop width="100%">
-                  <source src="static/images/videos/session_03_panel.mp4" type="video/mp4">
-                </video>
-              </div>
-              <p class="subtitle is-6">session_03, exo cam05 &mdash; Raw | 2D keypoints | SMPL-X + MANO mesh.</p>
-
-              <div class="videobox" style="margin-top:1rem;">
-                <video preload="none" playsinline controls muted loop width="100%">
-                  <source src="static/images/videos/session_06_panel.mp4" type="video/mp4">
-                </video>
-              </div>
-              <p class="subtitle is-6">session_06, exo cam05 &mdash; Raw | 2D keypoints | SMPL-X + MANO mesh.</p>
-
-              <div class="videobox" style="margin-top:1rem;">
-                <video preload="none" playsinline controls muted loop width="100%">
-                  <source src="static/images/videos/session_10_panel.mp4" type="video/mp4">
-                </video>
-              </div>
-              <p class="subtitle is-6">session_10, exo cam05 &mdash; Raw | 2D keypoints | SMPL-X + MANO mesh.</p>
-
-              <div class="columns is-centered" style="margin-top:1rem;">
-                <div class="column is-half">
-                  <div class="videobox">
-                    <video preload="none" playsinline controls muted loop width="100%">
-                      <source src="static/images/videos/session_10_ego_panel.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <p class="subtitle is-6">session_10, Aria egocentric &mdash; Raw | SMPL-X + MANO mesh.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="task-panel" id="panel-finger-contact">
-              <div class="columns">
-                <div class="column">
-                  <div class="videobox">
-                    <video preload="none" playsinline controls muted loop width="100%">
-                      <source src="static/images/videos/session_06_finger_contact.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <p class="subtitle is-6">session_06</p>
-                </div>
-                <div class="column">
-                  <div class="videobox">
-                    <video preload="none" playsinline controls muted loop width="100%">
-                      <source src="static/images/videos/session_10_finger_contact.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <p class="subtitle is-6">session_10</p>
-                </div>
-                <div class="column">
-                  <div class="videobox">
-                    <video preload="none" playsinline controls muted loop width="100%">
-                      <source src="static/images/videos/session_17_finger_contact.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                  <p class="subtitle is-6">session_17</p>
-                </div>
-              </div>
-              <p class="subtitle is-6">Per-fingertip contact state overlaid live on the hand skeleton (green = in contact, red = not).</p>
-            </div>
-
+          <p class="hand-description">
+            <span style="color:#3a9d6e">session_06</span>, exo cam05.<br>
+            Per-fingertip contact state overlaid live on the hand skeleton: <span style="color:#2e8b45">green</span> = in contact, <span style="color:#c0392b">red</span> = not.
+          </p>
+        </div>
+        <div class="item" style="padding: 0 0.5rem;">
+          <div class="videobox">
+            <video preload="none" playsinline controls muted loop width="100%">
+              <source src="static/images/videos/session_10_finger_contact.mp4" type="video/mp4">
+            </video>
           </div>
+          <p class="hand-description">
+            <span style="color:#3a9d6e">session_10</span>, exo cam05.<br>
+            Per-fingertip contact state overlaid live on the hand skeleton: <span style="color:#2e8b45">green</span> = in contact, <span style="color:#c0392b">red</span> = not.
+          </p>
+        </div>
+        <div class="item" style="padding: 0 0.5rem;">
+          <div class="videobox">
+            <video preload="none" playsinline controls muted loop width="100%">
+              <source src="static/images/videos/session_17_finger_contact.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p class="hand-description">
+            <span style="color:#3a9d6e">session_17</span>, exo cam05.<br>
+            Per-fingertip contact state overlaid live on the hand skeleton: <span style="color:#2e8b45">green</span> = in contact, <span style="color:#c0392b">red</span> = not.
+          </p>
         </div>
       </div>
     </div>
@@ -388,6 +397,11 @@
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
       <i class="fas fa-chevron-up"></i>
     </button>
+
+    <div class="lightbox-overlay" id="lightbox">
+      <span class="lightbox-close" id="lightboxClose">&times;</span>
+      <img id="lightboxImg" src="" alt="Zoomed figure">
+    </div>
 
     <footer class="footer">
       <div class="container">
@@ -560,6 +574,24 @@
         });
       }
     });
+  });
+
+  // Image zoom lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  function closeLightbox() {
+    lightbox.classList.remove('is-active');
+    lightboxImg.src = '';
+  }
+  document.querySelectorAll('.zoomable-img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('is-active');
+    });
+  });
+  lightbox.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
   });
 
   // Back-to-top button
