@@ -5,7 +5,7 @@
     <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
     <!-- Replace the content tag with appropriate information -->
     <meta name="description" content="Contact4D: A Video Dataset for Whole-Body Human Motion and Finger Contact in Dexterous Operations">
-    <meta name="keywords" content="Contact4D">
+    <meta name="keywords" content="Contact4D, Contact4D dataset, finger contact, hand-object interaction, multi-view dataset, egocentric, exocentric, SMPL-X, MANO, 3D hand pose, 3D human pose">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
     <meta property="og:image" content="static/images/teaser.jpg"/>
@@ -85,6 +85,7 @@
       <div class="navbar-end">
         <a class="navbar-item" href="#abstract">Abstract</a>
         <a class="navbar-item" href="#dataset">Dataset</a>
+        <a class="navbar-item" href="#download">Download</a>
         <a class="navbar-item" href="#BibTeX">BibTeX</a>
       </div>
     </div>
@@ -197,14 +198,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Understanding how humans interact with objects is key to building robust human-centric artificial intelligence. However, this area remains relatively unexplored due to the lack of large-scale datasets. Recent datasets focusing on this issue mainly consist of activities captured entirely in controlled lab environments, and contact annotations are mostly estimated using threshold clips. We introduce Contact4D, a multi-view video dataset for human-object interaction that provides detailed body poses and accurate contact annotations. We use a flexible multi-view capture system to record individuals performing furniture assembly tasks and provide annotations for human detection, tracking, 2D/3D pose estimation, and ground-truth contact. Additionally, we propose a novel processing pipeline to extract accurate hand poses even when they are severely occluded. Contact4D consists of 2M images captured from 19 synchronized cameras across 350 video sequences, spanning diverse environments, varioius furniture types, and unique subjects. We evaluate existing methods for human pose estimation and human-centric contact estimation, demonstrating their inability to generalize to our dataset. Lastly, we fine-tune a pretrained MultiHMR model on Contact4D and observe an improved performance of 56.6% body MPJPE and 26.4% hand MPJPE in scenarios under severe self-occlusion and object occlusion.
+            Understanding how humans interact with objects is key to building robust human-centric artificial intelligence. However, this area remains relatively unexplored due to the lack of large-scale datasets. Recent datasets focusing on this issue mainly consist of activities captured entirely in controlled lab environments, and contact annotations are mostly estimated using threshold clips. We introduce Contact4D, a multi-view video dataset for human-object interaction that provides detailed body poses and accurate contact annotations. We use a flexible multi-view capture system to record individuals performing furniture assembly tasks and provide annotations for human detection, tracking, 2D/3D pose estimation, and ground-truth contact. Additionally, we propose a novel processing pipeline to extract accurate hand poses even when they are severely occluded. Contact4D consists of 2M images captured from 19 synchronized cameras across 350 video sequences, spanning diverse environments, various furniture types, and unique subjects. We evaluate existing methods for human pose estimation and human-centric contact estimation, demonstrating their inability to generalize to our dataset. Lastly, we fine-tune a pretrained MultiHMR model on Contact4D and observe an improved performance of 56.6% body MPJPE and 26.4% hand MPJPE in scenarios under severe self-occlusion and object occlusion.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- Dataset Comparison -->
 <section class="section" id="dataset">
@@ -458,6 +458,40 @@
       <p class="subtitle is-6 has-text-centered" style="margin-top:0.5rem;">Per-fingertip contact state shown as a fixed HUD panel per hand: <span style="color:#c0392b">red</span> = in contact, <span style="color:#2e8b45">green</span> = not.</p>
     </div>
   </section>
+
+<!-- Download & Data Format -->
+<section class="section" id="download">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered fade-in">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><span style="color: #3a9d6e">Download</span> &amp; Data Format</h2>
+        <div class="content has-text-justified">
+          <p>
+            The Contact4D dataset is hosted on <a href="https://huggingface.co/datasets/Jyun-Ting/Contact4D/tree/main" target="_blank" rel="noopener">Hugging Face</a>. Data is organized by capture session (<code>session_01</code>, <code>session_02</code>, &hellip;), and each session contains its recorded sequences (<code>001_session_01</code>, &hellip;). Inside a sequence, <code>exo/</code> holds the exocentric camera images (<code>cam01</code>&ndash;<code>cam18</code>), <code>ego/</code> holds the Aria RGB and SLAM streams, and <code>processed_data/</code> holds all annotations:
+          </p>
+          <ul>
+            <li><code>body_pose3d/</code>, <code>hand_pose3d/</code> &mdash; 3D body (17 joints) and hand (21 joints per hand) keypoints in world coordinates, in meters.</li>
+            <li><code>body_poses2d/</code>, <code>hand_poses2d_corrective/</code> &mdash; per-camera 2D keypoints.</li>
+            <li><code>smpl/</code>, <code>smplx/</code>, <code>mano/</code> &mdash; fitted body and hand model parameters and meshes.</li>
+            <li><code>finger_contact/annotations.json</code> &mdash; per-frame contact state for all ten fingertips.</li>
+            <li><code>camera_params/</code> &mdash; intrinsics and extrinsics for every exo camera and Aria stream.</li>
+          </ul>
+          <p>
+            The <a href="https://github.com/jyuntins/Contact4D_Toolkit" target="_blank" rel="noopener">Contact4D Toolkit</a> is a lightweight Python package (numpy, OpenCV, PyTorch, smplx) for working with the release. It projects 3D keypoints into any view, converts SMPL/SMPL-X/MANO to camera space, renders meshes on images, undistorts exo and Aria images, and visualizes fingertip contact. For example:
+          </p>
+<pre><code>git clone https://github.com/jyuntins/Contact4D_Toolkit
+cd Contact4D_Toolkit &amp;&amp; pip install -r requirements.txt
+
+python scripts/visualize_finger_contact.py --sequence-path /path/to/001_session_01 \
+    --camera cam05 --frame 1 --output-dir out/finger_contact</code></pre>
+          <p>
+            Full annotation schemas, camera models, and body model setup are documented in the toolkit's <a href="https://github.com/jyuntins/Contact4D_Toolkit/tree/main/docs" target="_blank" rel="noopener">docs</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
