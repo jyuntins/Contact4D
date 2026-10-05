@@ -198,7 +198,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Understanding how humans interact with objects is key to building robust human-centric artificial intelligence. However, this area remains relatively unexplored due to the lack of large-scale datasets. Recent datasets focusing on this issue mainly consist of activities captured entirely in controlled lab environments, and contact annotations are mostly estimated using threshold clips. We introduce Contact4D, a multi-view video dataset for human-object interaction that provides detailed body poses and accurate contact annotations. We use a flexible multi-view capture system to record individuals performing furniture assembly tasks and provide annotations for human detection, tracking, 2D/3D pose estimation, and ground-truth contact. Additionally, we propose a novel processing pipeline to extract accurate hand poses even when they are severely occluded. Contact4D consists of 2M images captured from 19 synchronized cameras across 350 video sequences, spanning diverse environments, various furniture types, and unique subjects. We evaluate existing methods for human pose estimation and human-centric contact estimation, demonstrating their inability to generalize to our dataset. Lastly, we fine-tune a pretrained MultiHMR model on Contact4D and observe an improved performance of 56.6% body MPJPE and 26.4% hand MPJPE in scenarios under severe self-occlusion and object occlusion.
+            Building human-centric AI that understands how people use their hands requires data on how humans physically interact with objects, yet large-scale datasets for this remain scarce. Most existing ones are recorded entirely in controlled lab settings, and their contact labels are typically estimated by thresholding hand&ndash;object distances rather than measured directly. To address this, we present Contact4D, a multi-view video dataset of people assembling furniture, captured with a flexible multi-camera system and annotated with human detections, tracks, 2D/3D body and hand poses, and ground-truth finger contact. Because hands are often heavily occluded during assembly, we also introduce a processing pipeline that recovers accurate hand poses under severe occlusion. The dataset contains 2M images from 19 synchronized cameras over 350 video sequences, covering a variety of environments, furniture types, and subjects. Benchmarking current human pose estimation and contact estimation methods shows that they generalize poorly to these scenarios. Finally, fine-tuning a pretrained MultiHMR model on Contact4D improves body MPJPE by 56.6% and hand MPJPE by 26.4% under severe self- and object occlusion.
           </p>
         </div>
       </div>
@@ -274,7 +274,7 @@
     <div class="columns is-centered has-text-centered fade-in" style="margin-top:2.5rem;">
       <div class="column is-four-fifths">
         <img src="static/images/camera_rig_schematic.jpg" alt="Multi-camera capture rig schematic" class="zoomable-img" style="max-width:100%; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
-        <p class="subtitle is-6">17 synchronized exo cameras ring each subject, plus one head-worn Aria egocentric device.</p>
+        <p class="subtitle is-6">18 synchronized exo cameras ring each subject, plus one head-worn Aria egocentric device.</p>
       </div>
     </div>
   </div>
